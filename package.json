@@ -44,5 +44,8 @@
     "prettier": "^1.18.2",
     "typescript": "^3.6.2",
     "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "proxy-agent": "4.0.1"
   }
 }
