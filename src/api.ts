@@ -10,7 +10,7 @@ import config from './config'
 
 declare global {
   interface Window {
-    I18n: any;
+    I18n: string;
   }
 }
 
@@ -42,11 +42,11 @@ class API {
   }
 
   async get(path: string, config: any) {
-    await this.client.get(path, config)
+    return await this.client.get(path, config)
   }
 
   async patch(path: string, payload: any, config: any) {
-    await this.client.request({
+    return await this.client.request({
       method: 'PATCH',
       url: path,
       responseType: 'json',
@@ -56,7 +56,7 @@ class API {
   }
 
   async post(path: string, payload: any) {
-    await this.client.request({
+    return await this.client.request({
       method: 'POST',
       url: path,
       responseType: 'json',
