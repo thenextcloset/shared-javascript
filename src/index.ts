@@ -1,1 +1,3 @@
-console.log('TypeScript is working!')
+import Repository from './repository'
+
+export default Repository
