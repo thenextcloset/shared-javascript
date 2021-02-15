@@ -8,6 +8,12 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios'
 import config from './config'
 
+declare global {
+  interface Window {
+    I18n: any;
+  }
+}
+
 class API {
   client: AxiosInstance
 
