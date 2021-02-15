@@ -1,8 +1,9 @@
 {
   "name": "typescript-boilerplate",
-  "version": "0.0.1",
-  "description": "TypeScript Boilerplate code setup, with ESLint and Prettier, at your doorsteps.",
+  "version": "1.0.6",
+  "description": "Shared Javascript used by our native app and webapp",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -11,24 +12,19 @@
     "lint": "eslint src/*.ts",
     "lint:fix": "eslint src/*.ts --fix",
     "test": "echo \"No tests specified\"",
-    "ship": "npm run build && npm publish"
+    "ship": "tsc && npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KumarAbhirup/koji-leaderboard-api.git"
+    "url": "git+ssh://git@github.com/thenextcloset/shared-javascript.git"
   },
-  "keywords": [
-    "koji",
-    "koji-database",
-    "npm",
-    "package"
-  ],
-  "author": "Kumar Abhirup <kumarabhirup5@gmail.com> (http://kumar.now.sh)",
-  "license": "MIT",
+  "keywords": [],
+  "author": "Max Kraanen",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/KumarAbhirup/koji-leaderboard-api/issues"
+    "url": "https://github.com/thenextcloset/shared-javascript/issues"
   },
-  "homepage": "https://github.com/KumarAbhirup/koji-leaderboard-api#readme",
+  "homepage": "https://github.com/thenextcloset/shared-javascript#readme",
   "devDependencies": {
     "@types/node": "^12.7.3",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
