@@ -46,6 +46,7 @@
     "typings": "^2.1.1"
   },
   "dependencies": {
+    "proxy-agent": "4.0.1",
     "axios": "^0.21.1"
   }
 }
