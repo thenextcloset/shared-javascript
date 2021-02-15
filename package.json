@@ -1,6 +1,6 @@
 {
-  "name": "typescript-boilerplate",
-  "version": "1.0.6",
+  "name": "@thenextcloset/shared-javascript",
+  "version": "1.0.14",
   "description": "Shared Javascript used by our native app and webapp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -44,5 +44,8 @@
     "prettier": "^1.18.2",
     "typescript": "^3.6.2",
     "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
