@@ -42,11 +42,11 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
-    "typescript": "^3.6.2",
-    "typings": "^2.1.1"
+    "typescript": "^3.6.2"
   },
   "dependencies": {
-    "proxy-agent": "4.0.1",
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "https-proxy-agent": "^5.0.0",
+    "proxy-agent": "4.0.1"
   }
 }
