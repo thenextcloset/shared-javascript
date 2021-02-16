@@ -44,8 +44,9 @@
     "typescript": "^3.6.2"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "https-proxy-agent": "^5.0.0",
-    "proxy-agent": "4.0.1"
+    "axios": "^0.21.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
