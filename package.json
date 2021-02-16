@@ -1,6 +1,6 @@
 {
   "name": "@thenextcloset/shared-javascript",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Shared Javascript used by our native app and webapp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,8 +11,7 @@
     "dev": "npm run build && nodemon dist/index.js",
     "lint": "eslint src/*.ts",
     "lint:fix": "eslint src/*.ts --fix",
-    "test": "echo \"No tests specified\"",
-    "ship": "tsc && npm publish --access public"
+    "test": "echo \"No tests specified\""
   },
   "repository": {
     "type": "git",
