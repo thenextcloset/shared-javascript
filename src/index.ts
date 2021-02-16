@@ -1,1 +1,3 @@
-export { default } from './repository'
+import Repository from './repository'
+
+export { Repository }
