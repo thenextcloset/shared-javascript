@@ -18,6 +18,23 @@ class Repository {
   async getSustainInfo() {
     return await this.api.get("/v4/impact-calculator");
   }
+
+  async getFavoriteBrandIds(headers: Object) {
+    return await this.api.get('/v4/favorites/brands/ids', headers);
+  }
+
+  async getFavoriteProductIds(headers: Object) {
+    return await this.api.get('/v4/favorites/products/ids', headers);
+  }
+
+  async getFavoriteSellerIds(headers: Object) {
+    return await this.api.get('/v4/favorites/sellers/ids', headers);
+  }
+
+  async getFavoriteIds(headers: Object) {
+    return await this.api.get('/v4/favorites/ids', headers);
+  }
+
 }
 
 export default new Repository()
