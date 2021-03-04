@@ -11,15 +11,14 @@
     "dev": "npm run build && nodemon dist/index.js",
     "lint": "eslint src/*.ts",
     "lint:fix": "eslint src/*.ts --fix",
-    "test": "echo \"No tests specified\"",
-    "ship": "tsc && npm publish --access public"
+    "test": "echo \"No tests specified\""
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/thenextcloset/shared-javascript.git"
   },
   "keywords": [],
-  "author": "Max Kraanen",
+  "author": "The Next Closet",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/thenextcloset/shared-javascript/issues"
@@ -42,11 +41,12 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
-    "typescript": "^3.6.2",
-    "typings": "^2.1.1"
+    "typescript": "^3.6.2"
   },
   "dependencies": {
-    "proxy-agent": "4.0.1",
     "axios": "^0.21.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
