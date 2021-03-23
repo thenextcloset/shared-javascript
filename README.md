@@ -2,9 +2,9 @@ This repository contains Javascript that is shared by the The Next Closet web ap
 
 To publish:
 
-Bump version in package.json
-Run yarn build
-Run npm publish
+1. Bump version in package.json
+2. Run yarn build
+3. Run npm publish
 
 To link the NPM package locally (without publishing):
 
