@@ -1,5 +1,10 @@
 This repository contains Javascript that is shared by the The Next Closet web app and the native app.
 
+In order to publish an NPM package, you need to have an NPM account
+* Sign up [here](https://www.npmjs.com/signup).
+* Once you've signed up login from the command line using:  
+```$ npm login ```
+
 To publish:
 
 1. Bump version in package.json
