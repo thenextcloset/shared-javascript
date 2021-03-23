@@ -7,7 +7,7 @@ Run yarn build
 Run npm publish
 To link the NPM package locally (without publishing):
 
-1 .Run yarn link
+1. Run yarn link
 2. Kill webpack dev server in the directory where you want to use the package
 3. Go to the directory where you want to use the package. Run yarn link @thenextcloset/shared-javascript
 4. Run yarn install
