@@ -5,18 +5,18 @@
  * to wrap the data types fetched from the TNC servers
  */
 
-import { AxiosInstance } from 'axios'
-import API from './api'
+import { AxiosInstance } from 'axios';
+import API from './api';
 
 class Repository {
-  api: AxiosInstance & any
+  api: AxiosInstance & any;
 
   constructor() {
-    this.api = API
+    this.api = API;
   }
 
   async getSustainInfo() {
-    return await this.api.get("/v4/impact-calculator");
+    return await this.api.get('/v4/impact-calculator');
   }
 
   async getFavoriteBrandIds(headers: Object) {
@@ -35,6 +35,9 @@ class Repository {
     return await this.api.get('/v4/favorites/ids', headers);
   }
 
+  async getProductProperties() {
+    return await this.api.get('/v4/products/properties');
+  }
 }
 
-export default new Repository()
+export default new Repository();
