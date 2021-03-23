@@ -5,6 +5,7 @@ To publish:
 Bump version in package.json
 Run yarn build
 Run npm publish
+
 To link the NPM package locally (without publishing):
 
 1. Run yarn link
