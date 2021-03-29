@@ -19,6 +19,29 @@ class Repository {
     return await this.api.get('/v4/impact-calculator');
   }
 
+  async getProduct(id: string) {
+    return await this.api.get(`/v2/products/${id}`);
+  }
+
+  async getOrders(id: string, headers: Object) {
+    return await this.api.get(`v4/orders/${id}`, headers);
+  }
+
+  async getSeller(id: string) {
+    return await this.api.get(`/user/${id}`);
+  }
+
+  async getFavorites(headers: Object) {
+    return await this.api.get('/v4/favorites', headers);
+  }
+  async addFavorites(params: any, headers: Object, type: string) {
+    return await this.api.post(`/v4/favorites/${type}`, params, headers);
+  }
+
+  async getFavoriteBrands(headers: Object) {
+    return await this.api.get('/v4/favorites/brands', headers);
+  }
+
   async getFavoriteBrandIds(headers: Object) {
     return await this.api.get('/v4/favorites/brands/ids', headers);
   }
@@ -37,6 +60,18 @@ class Repository {
 
   async getProductProperties() {
     return await this.api.get('/v4/products/properties');
+  }
+
+  getDegredationMessage() {
+    return this.api.get('/v4/degradation-message');
+  }
+
+  async getUserNotifications(headers: Object) {
+    return await this.api.get('v4/users/current/user-notifications', headers);
+  }
+
+  async updateUserNotifications(params: any, headers: Object) {
+    return await this.api.patch('v4/users/current/user-notifications', params, headers);
   }
 }
 
