@@ -38,6 +38,22 @@ class Repository {
   async getProductProperties() {
     return await this.api.get('/v4/products/properties');
   }
+
+  async uploadProduct(params: any, headers: Object) {
+    return await this.api.post(`/v4/users/current/products`, params, headers);
+  }
+
+  async updateProduct(params: any, headers: Object) {
+    return await this.api.put(
+      `/v4/users/current/products/${params.id}`,
+      { product: params.product },
+      headers
+    );
+  }
+
+  async getUserDetails(headers: Object) {
+    return await this.api.get('/v4/users/current', headers);
+  }
 }
 
 export default new Repository();
