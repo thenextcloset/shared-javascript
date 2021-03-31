@@ -51,6 +51,10 @@ class Repository {
     );
   }
 
+  async getProduct(productId: number, headers: Object) {
+    return await this.api.get(`/v4/products/${productId}`, headers);
+  }
+
   async getUserDetails(headers: Object) {
     return await this.api.get('/v4/users/current', headers);
   }
