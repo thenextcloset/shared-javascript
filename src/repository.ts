@@ -39,6 +39,10 @@ class Repository {
     return await this.api.get('/v4/products/properties');
   }
 
+  async uploadFile(file: any) {
+    return await this.api.postFile(`/v4/assets`, file);
+  }
+
   async uploadProduct(params: any, headers: Object) {
     return await this.api.post(`/v4/users/current/products`, params, headers);
   }
