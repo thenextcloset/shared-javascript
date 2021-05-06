@@ -1,6 +1,6 @@
 {
   "name": "@thenextcloset/shared-javascript",
-  "version": "1.0.19",
+  "version": "1.0.21",
   "description": "Shared Javascript used by our native app and webapp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

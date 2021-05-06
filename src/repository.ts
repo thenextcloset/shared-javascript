@@ -62,16 +62,28 @@ class Repository {
     return await this.api.get('/v4/products/properties');
   }
 
-  getDegredationMessage() {
-    return this.api.get('/v4/degradation-message');
+  async uploadFile(file: any) {
+    return await this.api.postFile(`/v4/assets`, file);
   }
 
-  async getUserNotifications(headers: Object) {
-    return await this.api.get('v4/users/current/user-notifications', headers);
+  async uploadProduct(params: any, headers: Object) {
+    return await this.api.post(`/v4/users/current/products`, params, headers);
   }
 
-  async updateUserNotifications(params: any, headers: Object) {
-    return await this.api.patch('v4/users/current/user-notifications', params, headers);
+  async updateProduct(params: any, headers: Object) {
+    return await this.api.put(
+      `/v4/users/current/products/${params.id}`,
+      { product: params.product },
+      headers
+    );
+  }
+
+  async getProduct(productId: number, headers: Object) {
+    return await this.api.get(`/v4/products/${productId}`, headers);
+  }
+
+  async getUserDetails(headers: Object) {
+    return await this.api.get('/v4/users/current', headers);
   }
 }
 

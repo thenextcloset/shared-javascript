@@ -5,8 +5,8 @@
  *
  */
 
-import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios'
-import config from './config'
+import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
+import config from './config';
 
 declare global {
   interface Window {
@@ -15,7 +15,7 @@ declare global {
 }
 
 class API {
-  client: AxiosInstance
+  client: AxiosInstance;
 
   constructor() {
     this.client = axios.create({
@@ -24,25 +24,25 @@ class API {
         'Content-Type': 'application/json',
         locale: window.I18n,
       },
-    })
-    this.client.interceptors.response.use(this.handleSuccess, this.handleError)
+    });
+    this.client.interceptors.response.use(this.handleSuccess, this.handleError);
   }
 
   handleSuccess(response: AxiosResponse) {
-    return response
+    return response;
   }
 
   handleError = (error: AxiosError<{ error: { response: any } }>) => {
     if (error.response?.status === 401) {
-      console.error('authentication error')
-      localStorage.removeItem('auth')
+      console.error('authentication error');
+      localStorage.removeItem('auth');
     } else {
-      return Promise.reject(error)
+      return Promise.reject(error);
     }
-  }
+  };
 
   async get(path: string, config: any) {
-    return await this.client.get(path, config)
+    return await this.client.get(path, config);
   }
 
   async patch(path: string, payload: any, config: any) {
@@ -52,17 +52,28 @@ class API {
       responseType: 'json',
       data: payload,
       ...config,
-    })
+    });
   }
 
-  async post(path: string, payload: any) {
+  async post(path: string, payload: any, config: any) {
     return await this.client.request({
       method: 'POST',
       url: path,
       responseType: 'json',
       data: payload,
-    })
+      ...config,
+    });
+  }
+
+  async put(path: string, payload: any, config: any) {
+    return await this.client.request({
+      method: 'PUT',
+      url: path,
+      responseType: 'json',
+      data: payload,
+      ...config,
+    });
   }
 }
 
-export default new API()
+export default new API();
