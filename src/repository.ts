@@ -36,7 +36,7 @@ class Repository {
   }
 
   async getProductProperties() {
-    return await this.api.get('/v4/products/properties');
+    return await this.api.get('/v5/products/properties');
   }
 
   async uploadFile(file: any) {
