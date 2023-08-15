@@ -8,7 +8,7 @@ let config = { baseUrl: 'not-set' }
 if (process.env.RAILS_ENV === 'development') {
   config = { baseUrl: 'http://localhost:3000/api' }
 } else if (process.env.RAILS_ENV === 'staging') {
-  config = { baseUrl: 'https://a-tnc-staging.herokuapp.com/api' }
+  config = { baseUrl: 'https://staging.thenextcloset.com/api' }
 } else if (process.env.RAILS_ENV === 'production') {
   config = { baseUrl: 'https://thenextcloset.com/api' }
 }
